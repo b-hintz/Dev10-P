@@ -1,0 +1,11 @@
+@font-face {
+    font-family: myFirstFont;
+    src: url(sriracha-regular.ttf);
+}
+
+.task {
+    width: fit-content;
+}
+h1 {
+    font-family: myFirstFont;
+}
