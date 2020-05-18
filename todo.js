@@ -1,6 +1,5 @@
 let tasks = [];
 
-
 addItem=()=>{
     var item = document.getElementById("input1").value;
     var d = document.getElementById("input2").value;
@@ -30,11 +29,11 @@ addItem=()=>{
         for (var i = 0; i < tasks.length; i++){
             if (tasks[i][1] == 1)
             {
-                document.getElementById("todolist").innerHTML += ("<div id=" + i + " role='alert'><div>" + tasks[i][0] + "<span type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden= 'true'>&times;</span></span></div><div>1 day</div></div>");
+                document.getElementById("todolist").innerHTML += (`<div id="${i}" role='alert'><div>${tasks[i][0]}<span type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden= 'true'>&times;</span></span></div><div>1 day</div></div>`);
             }
             else
             {
-                document.getElementById("todolist").innerHTML += ("<div id=" + i + " role='alert'><div>" + tasks[i][0] + "<span type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden= 'true'>&times;</span></span></div><div>" + tasks[i][1] + " days</div></div>");
+                document.getElementById("todolist").innerHTML += (`<div id="${i}" role='alert'><div>${tasks[i][0]}<span type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden= 'true'>&times;</span></span></div><div>${tasks[i][1]} days</div></div>`);
             }
             if (tasks[i][1] > 6)
             {
@@ -64,7 +63,7 @@ addItem=()=>{
         }
         else if(dat <= nowms)
         {
-            alert("You must enter in a date AFTER: " + now);
+            alert(`You must enter in a date AFTER: ${now}`);
             return false;
         }
     }

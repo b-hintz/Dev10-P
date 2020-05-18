@@ -1,5 +1,5 @@
 @font-face {
-    font-family: myFirstFont;
+    font-family: sri;
     src: url(sriracha-regular.ttf);
 }
 
@@ -7,5 +7,5 @@
     width: fit-content;
 }
 h1 {
-    font-family: myFirstFont;
+    font-family: sri;
 }
