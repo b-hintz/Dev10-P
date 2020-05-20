@@ -1,11 +1,14 @@
 let tasks = [];
 
 addItem=()=>{
+    document.getElementById("validatedate").innerText = "";
+    document.getElementById("validatetask").innerText = "";
     var item = document.getElementById("input1").value;
     var d = document.getElementById("input2").value;
     var dat = document.getElementById("input2").valueAsNumber;
     var now = new Date();
     var nowms = now.getTime();
+    var format_date = `${now.getMonth() + 1}/${now.getDate()}/${now.getFullYear()}`
     var timeleft = Math.round((dat - nowms)/(1000*60*60*24)) + 1;
 
     if(item && timeleft>0)
@@ -53,17 +56,17 @@ addItem=()=>{
     {
         if (item == "")
         {
-            alert("You must enter in a task");
+            document.getElementById("validatetask").innerHTML = "<span class='validate px-3 pb-2'>You must enter in a task!</span>";
             return false;
         }
         else if (d == "")
         {
-            alert("You must enter in a date");
+            document.getElementById("validatedate").innerHTML = "<span class='validate px-3 pb-2'>You must enter in a date!</span>";
             return false;
         }
-        else if(dat <= nowms)
+        else
         {
-            alert(`You must enter in a date AFTER: ${now}`);
+            document.getElementById("validatedate").innerHTML = `<span class='validate px-3 pb-2'>You must enter in date after ${format_date}!</span>`;
             return false;
         }
     }

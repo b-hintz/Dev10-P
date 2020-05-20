@@ -16,17 +16,19 @@
     <h1 class="mx-auto">Todo List</h1>
     </div>
     <div class="row mx-5 border-bottom">
-        <form id="myform" name="myform" class="mx-auto" style="width:70%">
+        <form id="myform" name="myform" class="mx-auto" onsubmit="addItem(); return false;" style="width:70%">
             <div class="form-group">
                 <label for="input1">Task</label>
                 <input id="input1" name ="input1" type="text" class="form-control" style="width:100%">
+                <div id="validatetask" style="height:20px"></div>
             </div>
             <div class="form-group">
                 <label for="input2">Deadline Date</label>
                 <input id="input2" name="input2" type="date" class="form-control" style="width:100%">
+                <div id="validatedate" style="height:20px"></div>
             </div>
             <div class="form-group">
-            <input class="btn btn-primary" type="submit" onclick="addItem(); return false;">
+            <input class="btn btn-primary" type="submit">
             </div>
         </form>
     </div>

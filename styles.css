@@ -9,3 +9,9 @@
 h1 {
     font-family: sri;
 }
+.validate {
+    background-color: red;
+    color:white;
+    font-style: italic;
+    font-weight: bolder;
+}
